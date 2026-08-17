@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, BriefcaseBusiness, Code2, Camera, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -7,7 +8,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,14 +22,14 @@ export default function Contact() {
           </h3>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Contact Info */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="glass rounded-2xl p-8 border border-border space-y-6"
+            className="glass rounded-2xl p-5 sm:p-8 border border-border space-y-6"
           >
             <h4 className="text-xl font-bold text-text-primary mb-6">Contact Information</h4>
             
@@ -38,7 +39,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-xs text-text-secondary uppercase tracking-wider">Email</p>
-                <p className="text-text-primary font-medium">techmaster050718@gmail.com</p>
+                <p className="text-text-primary font-medium break-all text-sm sm:text-base">techmaster050718@gmail.com</p>
               </div>
             </a>
 
@@ -66,13 +67,13 @@ export default function Contact() {
               <p className="text-xs text-text-secondary uppercase tracking-wider mb-4">Connect Online</p>
               <div className="flex gap-3">
                 <a href="https://www.linkedin.com/in/abhay-ojha-331a47375" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg glass flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent/30 transition-all">
-                  <BriefcaseBusiness size={18} />
+                  <FaLinkedin size={18} />
                 </a>
                 <a href="https://github.com/techmaster050718" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg glass flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent/30 transition-all">
-                  <Code2 size={18} />
+                  <FaGithub size={18} />
                 </a>
                 <a href="https://www.instagram.com/abhay_ojha18?igsh=MTVmdmh0azNnMDhmeA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg glass flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent/30 transition-all">
-                  <Camera size={18} />
+                  <FaInstagram size={18} />
                 </a>
               </div>
             </div>
@@ -84,7 +85,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="lg:col-span-2 glass rounded-2xl p-8 border border-border"
+            className="lg:col-span-2 glass rounded-2xl p-5 sm:p-8 border border-border"
           >
             <h4 className="text-xl font-bold text-text-primary mb-6">Send Me a Message</h4>
             <form 

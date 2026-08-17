@@ -28,7 +28,7 @@ export default function Navbar() {
         scrolled ? 'bg-bg-primary/80 backdrop-blur-xl border-b border-border' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         <a href="#" className="text-2xl font-black tracking-tight text-text-primary hover:text-accent transition-colors">
           Abhay Ojha<span className="text-accent">.</span>
         </a>

@@ -17,7 +17,7 @@ const item = {
 export default function Skills() {
   return (
     <section id="skills" className="py-24 bg-bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

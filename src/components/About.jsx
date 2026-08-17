@@ -3,20 +3,20 @@ import { motion } from 'framer-motion';
 export default function About() {
   return (
     <section id="about" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+          className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
         >
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-accent to-accent-dark rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500" />
             <img 
               src="/aaa.png"
               alt="Abhay Ojha" 
-              className="relative w-full max-w-md mx-auto md:max-w-full rounded-2xl border border-border shadow-2xl object-cover aspect-[16/10]"
+              className="relative w-full max-w-md mx-auto md:max-w-full rounded-2xl border border-border shadow-2xl object-cover aspect-[4/5]"
               loading="lazy"
             />
           </div>

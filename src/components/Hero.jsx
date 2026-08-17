@@ -10,7 +10,7 @@ export default function Hero() {
         ENGINEER
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full grid lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10">
         {/* Left Content */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ export default function Hero() {
             Software Engineer & Cloud Developer
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
             BUILDING <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-dark">
               DIGITAL
