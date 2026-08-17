@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-bg-primary text-text-primary font-sans antialiased overflow-x-hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Grid Background */
+.bg-cinematic-grid {
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+/* Glassmorphism Utility */
+.glass {
+  @apply bg-bg-secondary/60 backdrop-blur-xl border border-border shadow-xl;
+}
+
+.glass-hover:hover {
+  @apply border-accent/30 shadow-[0_0_30px_-5px_rgba(0,223,143,0.15)];
+}
+
+/* Hide scrollbar for clean UI but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
