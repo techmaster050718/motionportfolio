@@ -42,8 +42,12 @@ export default function Experience() {
                 
                 <p className="text-text-secondary mb-4 flex items-center gap-2">
                   <Briefcase size={16} className="text-accent" />
-                  Project: <span className="text-text-primary font-semibold">{exp.project}</span>
+                  Focus: <span className="text-text-primary font-semibold">{exp.project}</span>
                 </p>
+
+                {exp.reference && (
+                  <p className="-mt-2 mb-4 text-xs font-mono text-accent">{exp.reference}</p>
+                )}
 
                 <ul className="space-y-2 mb-6">
                   {exp.bullets.map((bullet, i) => (

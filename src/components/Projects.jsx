@@ -15,21 +15,21 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-bg-secondary/30 overflow-hidden">
+    <section id="projects" className="py-16 sm:py-24 bg-bg-secondary/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-3">Portfolio</h2>
           <h3 className="text-3xl md:text-4xl font-black text-text-primary">Featured Projects</h3>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
+        <div className="grid gap-8 items-start lg:grid-cols-[1.3fr_1fr]">
           {/* Left: Interactive Stack (Desktop) / Scroll (Mobile) */}
-          <div className="lg:col-span-7 relative h-[400px] md:h-[500px] hidden md:block">
+          <div className="relative h-[400px] md:h-[440px] hidden md:block lg:max-w-[560px]">
             {projects.map((project, index) => {
               const diff = (index - activeIndex + projects.length) % projects.length;
               const isActive = diff === 0;
@@ -48,9 +48,12 @@ export default function Projects() {
                   transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
                   onClick={() => isActive ? nextProject() : handleCardClick(index)}
                 >
-                  <div className={`w-full h-full glass rounded-2xl p-8 border ${isActive ? 'border-accent/30 shadow-[0_0_40px_-10px_rgba(0,223,143,0.15)]' : 'border-border'} transition-all duration-300 flex flex-col justify-between`}>
+                  <div className={`w-full h-full glass rounded-2xl p-8 border ${isActive && project.featured ? 'border-accent/50 shadow-[0_0_50px_-10px_rgba(0,223,143,0.24)]' : isActive ? 'border-accent/30 shadow-[0_0_40px_-10px_rgba(0,223,143,0.15)]' : 'border-border'} transition-all duration-300 flex flex-col justify-between`}>
                     <div>
-                      <span className="text-accent text-sm font-bold tracking-wider uppercase">{project.category}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent text-sm font-bold tracking-wider uppercase">{project.category}</span>
+                        {project.featured && <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">Primary</span>}
+                      </div>
                       <h4 className="text-3xl font-black text-text-primary mt-2 mb-4">{project.title}</h4>
                       <p className="text-text-secondary line-clamp-3">{project.description}</p>
                     </div>
@@ -68,18 +71,28 @@ export default function Projects() {
           </div>
 
           {/* Mobile Fallback */}
-          <div className="md:hidden space-y-6">
-            {projects.map((project) => (
-              <div key={project.id} className="glass rounded-xl p-6 border border-border">
-                <span className="text-accent text-xs font-bold tracking-wider uppercase">{project.category}</span>
-                <h4 className="text-xl font-black text-text-primary mt-1 mb-3">{project.title}</h4>
+          <div className="md:hidden space-y-4">
+            {projects.map((project, index) => (
+              <motion.article
+                key={project.id}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                className={`glass rounded-xl p-5 border ${project.featured ? 'border-accent/40 shadow-[0_0_32px_-12px_rgba(0,223,143,0.25)]' : 'border-border'}`}
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-accent text-xs font-bold tracking-wider uppercase">{project.category}</span>
+                  {project.featured && <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">Primary Project</span>}
+                </div>
+                <h4 className={`${project.featured ? 'text-2xl' : 'text-xl'} font-black text-text-primary mt-2 mb-3`}>{project.title}</h4>
                 <p className="text-text-secondary text-sm mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t) => (
                     <span key={t} className="text-xs px-2 py-1 rounded bg-bg-primary border border-border text-text-secondary">{t}</span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+                <div className="flex flex-col min-[380px]:flex-row gap-3">
                   {project.live && (
                     <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-accent text-bg-primary font-bold rounded-lg text-sm">
                       Live Demo <ExternalLink size={14} />
@@ -89,12 +102,12 @@ export default function Projects() {
                       GitHub <Code2 size={14} />
                   </a>
                 </div>
-              </div>
+              </motion.article>
             ))}
           </div>
 
           {/* Right: Project Details Panel */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32">
+          <div className="lg:sticky lg:top-32">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}

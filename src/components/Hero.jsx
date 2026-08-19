@@ -17,12 +17,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
+          <div className="inline-flex max-w-full flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
             </span>
-            Software Engineer & Cloud Developer
+            Software Engineer | Python Backend | Cloud & DevOps
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
@@ -34,7 +34,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-text-secondary text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-            I am Abhay Ojha, passionate about Backend Development, Cloud Computing, DevOps, and Artificial Intelligence. I build scalable, production-ready software.
+            I build scalable backend systems, cloud infrastructure, DevOps workflows, and AI-powered applications.
           </p>
 
           <div className="flex flex-wrap gap-4">

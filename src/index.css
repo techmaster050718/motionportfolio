@@ -9,7 +9,11 @@
 }
 
 body {
-  @apply bg-bg-primary text-text-primary font-sans antialiased overflow-x-hidden;
+  @apply bg-bg-primary text-text-primary font-sans antialiased;
+}
+
+img, svg {
+  max-width: 100%;
 }
 
 html {

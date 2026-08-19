@@ -1,8 +1,9 @@
 export const skills = [
-  { category: 'Languages', items: ['Python', 'JavaScript', 'Java', 'SQL', 'C++'] },
-  { category: 'Frontend', items: ['React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS'] },
-  { category: 'Backend', items: ['FastAPI', 'Django', 'Node.js', 'REST APIs', 'PostgreSQL'] },
-  { category: 'Cloud & DevOps', items: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions'] },
-  { category: 'Tools', items: ['Git', 'GitHub', 'Linux', 'Postman', 'VS Code'] },
-  { category: 'Interests', items: ['Artificial Intelligence', 'System Design', 'Automation', 'Open Source'] },
+  { category: 'Programming Languages', items: ['Python', 'Go', 'JavaScript', 'TypeScript', 'Java', 'SQL', 'Dart', 'Flutter'] },
+  { category: 'Backend', items: ['FastAPI', 'Django', 'Node.js', 'Express.js', 'REST APIs', 'JWT Authentication'] },
+  { category: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite', 'Firebase', 'Supabase', 'Prisma ORM'] },
+  { category: 'Cloud & DevOps', items: ['Docker', 'Docker Compose', 'Kubernetes', 'Terraform', 'AWS', 'EC2', 'IAM', 'S3', 'Azure', 'GitHub Actions', 'GitLab CI/CD', 'Jenkins', 'Cloudflare', 'Nginx'] },
+  { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS'] },
+  { category: 'Version Control', items: ['Git', 'GitHub', 'GitLab', 'Bitbucket'] },
+  { category: 'Operating Systems', items: ['Linux', 'Ubuntu', 'Debian', 'Kali', 'Windows', 'macOS', 'Bash / Shell Scripting'] },
 ];

@@ -16,7 +16,7 @@ export default function About() {
             <img 
               src="/aaa.png"
               alt="Abhay Ojha" 
-              className="relative w-full max-w-md mx-auto md:max-w-full rounded-2xl border border-border shadow-2xl object-cover aspect-[4/5]"
+              className="relative w-full max-w-md mx-auto md:max-w-full rounded-2xl border border-border shadow-2xl object-cover aspect-[5/4]"
               loading="lazy"
             />
           </div>
@@ -28,11 +28,16 @@ export default function About() {
             </h3>
             <div className="space-y-4 text-text-secondary text-lg leading-relaxed">
               <p>
-                I am a Computer Science Engineering student passionate about Software Engineering, Backend Development, Cloud Computing, DevOps, Artificial Intelligence, and Modern Web Technologies.
+                I am a Software Engineer specializing in Python backend development, REST APIs, scalable cloud infrastructure, AI-powered applications, and DevOps automation.
               </p>
               <p>
-                I enjoy building scalable applications, automating deployments, designing clean architectures, and solving real-world engineering problems using modern technologies. I continuously learn emerging technologies including Docker, Kubernetes, Terraform, AWS, FastAPI, Django, Next.js, PostgreSQL, React, and AI-powered development.
+                I build with FastAPI, Django, and PostgreSQL, and automate production-ready deployments using Docker, Kubernetes, Terraform, AWS, and GitHub Actions.
               </p>
+            </div>
+            <div className="mt-6 rounded-xl border border-border bg-bg-secondary/40 p-4">
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">Education</p>
+              <p className="mt-1 font-semibold text-text-primary">Bachelor of Technology in Computer Science & Engineering</p>
+              <p className="mt-1 text-sm text-text-secondary">Institute of Technology and Management (ITM), GIDA · Final Year</p>
             </div>
             <a 
               href="/Abhay Resume.pdf" 
