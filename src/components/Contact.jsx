@@ -39,7 +39,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-xs text-text-secondary uppercase tracking-wider">Email</p>
-                <p className="text-text-primary font-medium break-all text-sm sm:text-base">techmaster050718@gmail.com</p>
+                <p className="text-text-primary font-medium break-all text-sm sm:text-base">abhayojha9580@gmail.com</p>
               </div>
             </a>
 
