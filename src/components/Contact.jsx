@@ -33,7 +33,7 @@ export default function Contact() {
           >
             <h4 className="text-xl font-bold text-text-primary mb-6">Contact Information</h4>
             
-            <a href="mailto:techmaster050718@gmail.com" className="flex items-center gap-4 text-text-secondary hover:text-accent transition-colors group">
+            <a href="mailto:abhayojha9580@gmail.com" className="flex items-center gap-4 text-text-secondary hover:text-accent transition-colors group">
               <div className="w-10 h-10 rounded-lg bg-bg-primary border border-border flex items-center justify-center group-hover:border-accent/30 transition-colors">
                 <Mail size={18} />
               </div>
@@ -89,7 +89,7 @@ export default function Contact() {
           >
             <h4 className="text-xl font-bold text-text-primary mb-6">Send Me a Message</h4>
             <form 
-              action="https://formspree.io/f/xgvbwolo" 
+              action="https://formspree.io/f/mnpqdaqz" 
               method="POST" 
               className="space-y-6"
               onSubmit={() => {
